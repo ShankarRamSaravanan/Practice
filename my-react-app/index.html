@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 id="demo"></h1>
+        <button onclick="showTime()">Show Time</button>
+        <button onclick="hideTime()">Stop Time</button>
+        <script>
+            const person = {
+                firstname:"john",
+                lastname: "Doe",
+                fullname: function(){
+                    return this.firstname + " " + this.lastname;
+                }
+            }
+            delete person.lastname;
+            console.log(person.lastname + " " + "- this is it");
+            document.getElementById("demo").innerHTML = person["firstname"] + " " + person.lastname + " " + person.fullname();
+        </script>
+    </body>
+</html>
